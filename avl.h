@@ -34,7 +34,6 @@ public:
 	Node* Balancing(Node* node);
         // Insert the node
         Node* InsertNode(Node* node, int inputnumber);
-
 	// Find Node that Node's number is equal to parameter's number
 	// FindNode is used in Minimum, Maximum
 	Node* FindNode(int number);

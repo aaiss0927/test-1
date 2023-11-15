@@ -32,9 +32,8 @@ public:
 	int GetBalanceFactor(Node* node);
 	// Perform the task of balancing AVL tree.
 	Node* Balancing(Node* node);
-  // Insert the node
-  Node* InsertNode(Node* node, int inputnumber);
-  
+        // Insert the node
+        Node* InsertNode(Node* node, int inputnumber);
 
 	// Find Node that Node's number is equal to parameter's number
 	// FindNode is used in Minimum, Maximum

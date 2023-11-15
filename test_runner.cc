@@ -41,13 +41,13 @@ void AccountTestFixture::TearDownTestCase()
 void AccountTestFixture::SetUp()
 {
 	std::cout << "SetUp called\n";
-	avl_.setRealRoot(avl_.insertNode(avl_.getRealRoot(), 1));
-	avl_.setRealRoot(avl_.insertNode(avl_.getRealRoot(), 2));
-	avl_.setRealRoot(avl_.insertNode(avl_.getRealRoot(), 3));
-	avl_.setRealRoot(avl_.insertNode(avl_.getRealRoot(), 4));
-	avl_.setRealRoot(avl_.insertNode(avl_.getRealRoot(), 5));
-	avl_.setRealRoot(avl_.insertNode(avl_.getRealRoot(), 6));
-	avl_.setRealRoot(avl_.insertNode(avl_.getRealRoot(), 7));
+	avl_.set_root(avl_.InsertNode(avl_.get_root(), 1));
+	avl_.set_root(avl_.InsertNode(avl_.get_root(), 2));
+	avl_.set_root(avl_.InsertNode(avl_.get_root(), 3));
+	avl_.set_root(avl_.InsertNode(avl_.get_root(), 4));
+	avl_.set_root(avl_.InsertNode(avl_.get_root(), 5));
+	avl_.set_root(avl_.InsertNode(avl_.get_root(), 6));
+	avl_.set_root(avl_.InsertNode(avl_.get_root(), 7));
 }
 
 void AccountTestFixture::TearDown()

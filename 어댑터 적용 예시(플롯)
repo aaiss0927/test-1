@@ -1,0 +1,49 @@
+/*
+ * File: creator.h
+ * Author: KeyLimePie (https://github.com/flashcy/INHA_OSAP_001_KeyLimePie.git)
+ * Date: 2023-11-15
+ * License: MIT License
+ */
+
+#ifndef AVL_FLOATADAPTER_H_
+#define AVL_FLOATADAPTER_H_
+
+#include "set.h"
+
+#define DISALLOW_COPY_AND_ASSIGN(TypeName) \
+    TypeName(const TypeName&); \
+	void operator=(const TypeName&)
+
+class FloatAdapter {
+public:
+	FloatAdapter(Set* set) : set_(set) {}
+    inline void Insert(float input) {
+        set_->Insert(static_cast<int>(input));
+    }
+    inline void Delete(float deletenumber) {
+        set_->Delete(static_cast<int>(deletenumber));
+    }
+    inline int GetRank(float number) {
+        return set_->GetRank(static_cast<int>(number));
+    }
+    inline int GetDepth(float number) {
+        return set_->GetDepth(static_cast<int>(number));
+    }
+    inline int GetSize() {
+        return set_->GetSize();
+    }
+    inline int IsEmpty() {
+        return set_->IsEmpty();
+    }
+    inline int Maximum(float number) {
+        return set_->Maximum(static_cast<int>(number));
+    }
+    inline int Minimum(float number) {
+        return set_->Minimum(static_cast<int>(number));
+    }
+private:
+	Set* set_;
+    DISALLOW_COPY_AND_ASSIGN(FloatAdapter);
+};
+
+#endif // AVL_FLOATADAPTER_H_

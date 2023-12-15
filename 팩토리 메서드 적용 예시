@@ -1,0 +1,26 @@
+template<typename T>
+class Creator {
+public:
+    Creator() {}
+    virtual ~Creator() {}
+    //FactoryMethod will return ConcreteSet Class
+    virtual Set<T>* FactoryMethod() const = 0;
+private:
+    DISALLOW_COPY_AND_ASSIGN(Creator);
+};
+
+
+template <typename T>
+class ConcreteCreatorAVL : public Creator<T>{
+public:
+    ConcreteCreatorAVL() {}
+    Set<T>* FactoryMethod() const override;
+private:
+    DISALLOW_COPY_AND_ASSIGN(ConcreteCreatorAVL);
+};
+
+template <typename T>
+Set<T>* ConcreteCreatorAVL<T>::FactoryMethod() const {
+	//Create AVL SET
+	return new ConcreteAVLSet<T>();
+}
